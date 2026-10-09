@@ -70,7 +70,7 @@ Omit internal refactoring, build tools, tests, routine dependency bumps, and dev
 
 Aim for fifth-grade reading level with an adult, respectful tone:
 
-- Use familiar words and short, direct sentences. Aim for roughly 8–15 words per sentence; split long ideas when useful.
+- Use familiar words and short, direct sentences. Aim for roughly 8 to 15 words per sentence; split long ideas when useful.
 - Describe the user's action or the problem they experienced. Prefer “You can…” and “Fixed a problem that…” over implementation details.
 - Use one idea per bullet, usually one sentence. Add a second short sentence when users need a step or limit.
 - Keep product names and screen labels accurate. Explain unavoidable technical terms in simple words.
@@ -89,6 +89,14 @@ Examples of the translation style, only when supported by the changes:
 | Refactored caching with no demonstrated user effect | Omit this change. |
 
 Treat reading level as a writing target. Do not claim a measured grade score unless a readability tool was used. Preserve accuracy when a product term is longer than a simple word.
+
+## Edit with Humanizer
+
+After drafting the notes, read the bundled [Humanizer skill](../humanizer/SKILL.md) and apply its rewrite process in **embedded mode**. If the host agent loads installed skills by name, load `humanizer` instead. The package installs both skill folders side by side so the relative link works. If neither copy is available, report the missing editing step outside the public notes rather than claiming to have used it.
+
+Edit only the wording of the verified draft. Keep each supported change, product name, availability limit, and required user action. Remove filler, hype, stock AI phrases, and stiff sentence patterns. Keep the fifth-grade reading target and the user's requested format. Let sentence lengths vary naturally within that target; do not force dramatic fragments or identical openings. Use a respectful product voice without adding opinions, invented anecdotes, or facts.
+
+Return only the final release notes, without Humanizer's intermediate draft or list of AI patterns. When writing a file, keep code blocks, metadata, and link targets unchanged. Check the edited notes against the evidence map to catch any changed meaning before delivery.
 
 ## Deliver the notes
 

@@ -90,11 +90,21 @@ Examples of the translation style, only when supported by the changes:
 
 Treat reading level as a writing target. Do not claim a measured grade score unless a readability tool was used. Preserve accuracy when a product term is longer than a simple word.
 
-## Edit with Humanizer
+## Humanize the notes
 
-After drafting the notes, read the bundled [Humanizer skill](../humanizer/SKILL.md) and apply its rewrite process in **embedded mode**. If the host agent loads installed skills by name, load `humanizer` instead. The package installs both skill folders side by side so the relative link works. If neither copy is available, report the missing editing step outside the public notes rather than claiming to have used it.
+Humanizer is built into this skill. After drafting the notes, read the internal [Humanizer guide](references/humanizer.md) and apply its rewrite process in embedded mode. This is a required editing step within the release-notes workflow. It does not require installing or invoking another skill.
 
 Edit only the wording of the verified draft. Keep each supported change, product name, availability limit, and required user action. Remove filler, hype, stock AI phrases, and stiff sentence patterns. Keep the fifth-grade reading target and the user's requested format. Let sentence lengths vary naturally within that target; do not force dramatic fragments or identical openings. Use a respectful product voice without adding opinions, invented anecdotes, or facts.
+
+Apply these checks to the draft:
+
+- Replace inflated claims and sales language with the specific user change.
+- Use simple verbs such as "is," "has," and "can." Remove filler and stacked qualifiers without losing meaningful limits.
+- Remove stock introductions, fake-candid hooks, forced punchlines, and generic positive endings.
+- Keep names consistent. Vary repetitive sentence openings when that helps, but keep useful repetition and accurate screen labels.
+- Use sentence case for headings. Avoid decorative emojis, unnecessary bold labels, and forced groups of three. Keep the release-note bullets that help users scan the changes.
+- Avoid em and en dashes unless the user's writing sample uses them. Preserve punctuation within exact names, quoted source text, and code.
+- Read the draft for natural rhythm, then check whether any fact was added, dropped, or changed. Correct any difference against the evidence map.
 
 Return only the final release notes, without Humanizer's intermediate draft or list of AI patterns. When writing a file, keep code blocks, metadata, and link targets unchanged. Check the edited notes against the evidence map to catch any changed meaning before delivery.
 
@@ -120,3 +130,5 @@ Include a release date only if the user or a release record supplies it; a commi
 Give a brief comparison scope outside the public notes, identifying previous and next refs and any material evidence gap. Keep technical evidence out of text intended for publication. Write a file when requested or when the repository's workflow calls for it; otherwise deliver the draft in chat. Publishing, creating a release, and committing changes are separate actions that require authorization for that action.
 
 Before delivery, check that every note describes a net change in this release, has evidence, and makes sense without knowing how the product was built. Remove duplicates, jargon, vague claims, and unsupported benefits.
+
+The built-in editing guidance comes from Humanizer 2.11.2, copyright 2025 Siqi Chen, under the [MIT license](LICENSE).
